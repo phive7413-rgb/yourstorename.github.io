@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Luxury Store</title>
+    <title>phantomHIVE | Luxury Store</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             background: #000000;
-            color: white;
+            color: #f7d774; /* soft gold text */
             font-family: 'Montserrat', sans-serif;
+        }
+
+        /* GOLD COLOR */
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f7d774;
         }
 
         /* NAVBAR */
@@ -21,175 +27,118 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            background: #0e0e0e;
+            padding: 20px 30px;
+            background: #000;
+            border-bottom: 1px solid var(--gold);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
         nav .logo {
-            font-family: "Playfair Display", serif;
             font-size: 28px;
-            color: #C6A667;
             font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--gold-light);
         }
 
-        nav ul {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        nav ul li a {
-            color: white;
+        nav a {
+            color: var(--gold-light);
             text-decoration: none;
-            font-size: 16px;
+            margin-left: 20px;
+            font-weight: 400;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: white;
         }
 
         /* HERO SECTION */
         .hero {
             text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(to bottom, #000000, #0e0e0e);
+            padding: 120px 20px;
         }
 
         .hero h1 {
-            font-family: "Playfair Display", serif;
-            font-size: 50px;
-            color: #C6A667;
-            margin-bottom: 20px;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--gold);
         }
 
         .hero p {
-            font-size: 18px;
-            margin-bottom: 40px;
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            color: var(--gold-light);
         }
 
+        /* GOLD BUTTON */
         .btn {
-            background: #C6A667;
-            color: black;
             padding: 15px 35px;
             font-size: 18px;
-            border-radius: 3px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        /* PRODUCT GRID */
-        .products {
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .products h2 {
-            font-family: "Playfair Display", serif;
-            font-size: 36px;
-            color: #C6A667;
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: #0e0e0e;
-            padding: 20px;
-            border: 1px solid #C6A667;
+            background: var(--gold);
+            color: black;
+            border: none;
             border-radius: 8px;
-            transition: 0.3s;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+            transition: 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 15px rgba(198, 166, 103, 0.5);
+        .btn:hover {
+            background: var(--gold-light);
+            box-shadow: 0 0 15px rgba(255, 215, 140, 0.8);
         }
 
-        .card img {
-            width: 100%;
-            border-radius: 5px;
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
         }
 
-        .card h3 {
-            margin-top: 15px;
-            font-size: 18px;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .card p {
-            color: #C6A667;
-            font-weight: 500;
+        /* Button press animation */
+        .btn-animate {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
-        /* FOOTER */
-        footer {
-            background: #000;
-            text-align: center;
-            padding: 40px;
-            margin-top: 60px;
-            border-top: 1px solid #C6A667;
-        }
-
-        footer p {
-            color: #C6A667;
-            font-size: 14px;
+        .btn-animate:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
 
 <body>
-<nav style="display: flex; gap: 20px; background: #111; padding: 15px;">
-    <a href="index.html" style="color:white; text-decoration:none;">Home</a>
-    <a href="products.html" style="color:white; text-decoration:none;">Products</a>
-    <a href="about.html" style="color:white; text-decoration:none;">About</a>
-    <a href="contact.html" style="color:white; text-decoration:none;">Contact</a>
-</nav>
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Luxury Essentials, Delivered.</h1>
-        <p>Curated premium products designed to elevate your lifestyle.</p>
-        <a href="#" class="btn">Shop Now</a>
-    </section>
 
-    <!-- PRODUCTS -->
-    <section class="products">
-        <h2>Featured Products</h2>
-
-        <div class="grid">
-
-            <div class="card">
-                <img src="https://via.placeholder.com/300x300" alt="Product">
-                <h3>Premium Gold Watch</h3>
-                <p>$89.99</p>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/300x300" alt="Product">
-                <h3>Luxury Scented Candle</h3>
-                <p>$29.99</p>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/300x300" alt="Product">
-                <h3>Velvet Home Blanket</h3>
-                <p>$54.99</p>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/300x300" alt="Product">
-                <h3>Gold Edge Glass Bottle</h3>
-                <p>$24.99</p>
-            </div>
-
+    <!-- NAVBAR -->
+    <nav class="fade-in">
+        <div class="logo">phantomHIVE</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </section>
+    </nav>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Luxora Market — All Rights Reserved</p>
-    </footer>
+    <!-- HERO SECTION -->
+    <section class="hero fade-in">
+        <h1>Welcome to phantomHIVE</h1>
+        <p>Luxury products delivered with class, elegance and prestige.</p>
+        <button class="btn btn-animate">Shop Now</button>
+    </section>
 
 </body>
-  </html>
+                </html>
