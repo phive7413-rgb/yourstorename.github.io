@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Luxury Store</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #000000;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #0e0e0e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            color: #C6A667;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #000000, #0e0e0e);
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 50px;
+            color: #C6A667;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: #C6A667;
+            color: black;
+            padding: 15px 35px;
+            font-size: 18px;
+            border-radius: 3px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* PRODUCT GRID */
+        .products {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 36px;
+            color: #C6A667;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #0e0e0e;
+            padding: 20px;
+            border: 1px solid #C6A667;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 15px rgba(198, 166, 103, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #C6A667;
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 1px solid #C6A667;
+        }
+
+        footer p {
+            color: #C6A667;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="logo">Luxora Market</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Luxury Essentials, Delivered.</h1>
+        <p>Curated premium products designed to elevate your lifestyle.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="Product">
+                <h3>Premium Gold Watch</h3>
+                <p>$89.99</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="Product">
+                <h3>Luxury Scented Candle</h3>
+                <p>$29.99</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="Product">
+                <h3>Velvet Home Blanket</h3>
+                <p>$54.99</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="Product">
+                <h3>Gold Edge Glass Bottle</h3>
+                <p>$24.99</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Luxora Market — All Rights Reserved</p>
+    </footer>
+
+</body>
+  </html>
