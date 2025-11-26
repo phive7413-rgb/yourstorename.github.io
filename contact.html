@@ -1,21 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | phantomHIVE</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            color: #f7d774;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f7d774;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 30px;
+            background: #000;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        nav .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+
+        nav a {
+            color: var(--gold-light);
+            margin-left: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h1 {
+            font-size: 40px;
+            color: var(--gold);
+        }
+
+        form {
+            margin: 40px auto;
+            max-width: 500px;
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: black;
+            border: 1px solid var(--gold-light);
+            border-radius: 6px;
+            color: var(--gold-light);
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #c8b168;
+        }
+
+        /* GOLD BUTTON */
+        .btn {
+            margin-top: 15px;
+            padding: 12px 25px;
+            font-size: 18px;
+            background: var(--gold);
+            color: black;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--gold-light);
+            box-shadow: 0 0 15px rgba(255, 215, 140, 0.8);
+        }
+    </style>
 </head>
+
 <body>
 
-<nav style="display: flex; gap: 20px; background: #111; padding: 15px;">
-    <a href="index.html" style="color:white; text-decoration:none;">Home</a>
-    <a href="products.html" style="color:white; text-decoration:none;">Products</a>
-    <a href="about.html" style="color:white; text-decoration:none;">About</a>
-    <a href="contact.html" style="color:white; text-decoration:none;">Contact</a>
-</nav>
+    <nav>
+        <div class="logo">phantomHIVE</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-<h1 style="color:white;">Contact Us</h1>
-<p style="color:white;">You can add your email or form here.</p>
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>Send us a message and we will reply shortly.</p>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button class="btn">Send Message</button>
+        </form>
+    </section>
 
 </body>
-</html>
+            </html>
